@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LauncherService", "LauncherService.csproj", "{764712CC-05BA-4BAE-9C27-7EE96188177B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LauncherService", "LauncherService\LauncherService.csproj", "{764712CC-05BA-4BAE-9C27-7EE96188177B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LanucherControl", "LauncherControl\LanucherControl.csproj", "{13EFE0A8-8141-464B-B2D2-071DAD3FED0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{764712CC-05BA-4BAE-9C27-7EE96188177B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{764712CC-05BA-4BAE-9C27-7EE96188177B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{764712CC-05BA-4BAE-9C27-7EE96188177B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13EFE0A8-8141-464B-B2D2-071DAD3FED0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13EFE0A8-8141-464B-B2D2-071DAD3FED0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13EFE0A8-8141-464B-B2D2-071DAD3FED0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13EFE0A8-8141-464B-B2D2-071DAD3FED0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,5 @@
 ﻿using System;
+using ProcessLauncher;
 
 /*
  * Todo:
@@ -10,7 +11,7 @@
 
 namespace ServiceLauncher
 {
-    class ServiceLauncher
+    class LauncherControl
     {
         static void Main(string[] args)
         {

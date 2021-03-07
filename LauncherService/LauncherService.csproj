@@ -34,7 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +54,12 @@
       <DependentUpon>LauncherService.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="LauncherInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LauncherInstaller.Designer.cs">
+      <DependentUpon>LauncherInstaller.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +68,9 @@
   <ItemGroup>
     <EmbeddedResource Include="LauncherService.resx">
       <DependentUpon>LauncherService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LauncherInstaller.resx">
+      <DependentUpon>LauncherInstaller.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

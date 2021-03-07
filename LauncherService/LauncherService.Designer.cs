@@ -29,23 +29,23 @@ namespace LauncherService
         /// </summary>
         private void InitializeComponent()
         {
-            this.eventLog1 = new System.Diagnostics.EventLog();
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
+            this.appEventLog = new System.Diagnostics.EventLog();
+            ((System.ComponentModel.ISupportInitialize)(this.appEventLog)).BeginInit();
             // 
-            // eventLog1
+            // appEventLog
             // 
-            this.eventLog1.Log = "Application";
-            this.eventLog1.Source = "LauncherService";
+            this.appEventLog.Log = "Launcher-ServiceLog";
+            this.appEventLog.Source = "Launcher-Service";
             // 
             // LauncherService
             // 
-            this.ServiceName = "Service1";
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
+            this.ServiceName = "LauncherService";
+            ((System.ComponentModel.ISupportInitialize)(this.appEventLog)).EndInit();
 
         }
 
         #endregion
 
-        private System.Diagnostics.EventLog eventLog1;
+        private System.Diagnostics.EventLog appEventLog;
     }
 }
