@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LauncherService", "LauncherService.csproj", "{764712CC-05BA-4BAE-9C27-7EE96188177B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{764712CC-05BA-4BAE-9C27-7EE96188177B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{764712CC-05BA-4BAE-9C27-7EE96188177B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{764712CC-05BA-4BAE-9C27-7EE96188177B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{764712CC-05BA-4BAE-9C27-7EE96188177B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C997AEFE-E2CA-42EF-9735-36779C6E18F6}
+	EndGlobalSection
+EndGlobal
