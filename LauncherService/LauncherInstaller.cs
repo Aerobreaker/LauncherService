@@ -11,9 +11,10 @@ namespace LauncherService
     [RunInstaller(true)]
     public partial class LauncherInstaller : System.Configuration.Install.Installer
     {
-        public LauncherInstaller()
+        public LauncherInstaller(string name="")
         {
             InitializeComponent();
+            this.LauncherServiceInstaller.ServiceName = name;
         }
     }
 }

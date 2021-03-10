@@ -15,6 +15,22 @@ namespace ServiceLauncher
     {
         static void Main(string[] args)
         {
+            Func<string, string> Unescape = System.Text.RegularExpressions.Regex.Unescape;
+
+            Console.Write("Number of arguments:");
+            Console.WriteLine(args.Length);
+
+            Console.WriteLine("\nArguments:");
+
+            for (int i = 0; i < args.Length; i++)
+            {
+                Console.Write(i);
+                Console.Write(": ");
+                Console.WriteLine(Unescape(args[i]));
+            }
+
+            return;
+
             //Instantiate new child
             ChildProc child = new ChildProc("cmd", "/k echo/test_cmdline", "C:\\Users\\Erik\\");
             //Start the child

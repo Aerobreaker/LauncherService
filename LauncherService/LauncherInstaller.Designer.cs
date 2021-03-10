@@ -29,33 +29,33 @@ namespace LauncherService
         /// </summary>
         private void InitializeComponent()
         {
-            this.LauncherService = new System.ServiceProcess.ServiceProcessInstaller();
-            this.serviceInstaller1 = new System.ServiceProcess.ServiceInstaller();
+            this.LauncherServiceProcessInstaller = new System.ServiceProcess.ServiceProcessInstaller();
+            this.LauncherServiceInstaller = new System.ServiceProcess.ServiceInstaller();
             // 
-            // LauncherService
+            // LauncherServiceProcessInstaller
             // 
-            this.LauncherService.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
-            this.LauncherService.Password = null;
-            this.LauncherService.Username = null;
+            this.LauncherServiceProcessInstaller.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
+            this.LauncherServiceProcessInstaller.Password = null;
+            this.LauncherServiceProcessInstaller.Username = null;
             // 
-            // serviceInstaller1
+            // LauncherServiceInstaller
             // 
-            this.serviceInstaller1.Description = "Service used to launch other processes as services and interact with them";
-            this.serviceInstaller1.DisplayName = "Launcher Service";
-            this.serviceInstaller1.ServiceName = "LauncherService";
-            this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+            this.LauncherServiceInstaller.Description = "Service used to launch other processes as services and interact with them";
+            this.LauncherServiceInstaller.DisplayName = "Launcher Service";
+            this.LauncherServiceInstaller.ServiceName = "LauncherService";
+            this.LauncherServiceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // LauncherInstaller
             // 
             this.Installers.AddRange(new System.Configuration.Install.Installer[] {
-            this.LauncherService,
-            this.serviceInstaller1});
+            this.LauncherServiceProcessInstaller,
+            this.LauncherServiceInstaller});
 
         }
 
         #endregion
 
-        private System.ServiceProcess.ServiceProcessInstaller LauncherService;
-        private System.ServiceProcess.ServiceInstaller serviceInstaller1;
+        private System.ServiceProcess.ServiceProcessInstaller LauncherServiceProcessInstaller;
+        private System.ServiceProcess.ServiceInstaller LauncherServiceInstaller;
     }
 }
