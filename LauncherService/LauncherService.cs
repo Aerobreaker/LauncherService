@@ -15,6 +15,8 @@ namespace LauncherService
     public partial class LauncherService : ServiceBase
     {
         private int _eventID = 1;
+        private bool _inPipeConnected = false;
+        private bool _outPipeConnected = false;
         public string InstanceName = "";
         public NamedPipeServerStream OPStream;
         public NamedPipeServerStream IPStream;
@@ -54,8 +56,8 @@ namespace LauncherService
             this.OPStream = new NamedPipeServerStream("LauncherService" + name + "_output", PipeDirection.Out, 1, PipeTransmissionMode.Message, PipeOptions.Asynchronous);
             this.IPStream = new NamedPipeServerStream("LauncherService" + name + "_input", PipeDirection.In, 1, PipeTransmissionMode.Message, PipeOptions.Asynchronous);
 
-            this.OPStream.WaitForConnectionAsync();
-            this.IPStream.WaitForConnectionAsync();
+            this.OPStream.BeginWaitForConnection(OnOutPipeConnect, this.OPStream);
+            this.IPStream.BeginWaitForConnection(OnInPipeConnected, this.IPStream);
 
             //Next, create ChildProc and loop somehow to link ChildProc streams to ipstream and opstream
             //Child process and command line args, plus startup commands will probably be taken from an ini file in %localappdata%\LauncherService\{name}
@@ -81,6 +83,28 @@ namespace LauncherService
         private void WriteLog(string logMessage, EventLogEntryType type = EventLogEntryType.Information)
         {
             this.appEventLog.WriteEntry(logMessage, type, this._eventID++);
+        }
+
+        private void ReadMessage(IAsyncResult iar)
+        {
+
+        }
+
+        private void WriteMessage(string message)
+        {
+
+        }
+
+        private void OnOutPipeConnect(IAsyncResult iar)
+        {
+            this._outPipeConnected = true;
+            this.OPStream.EndWaitForConnection(iar);
+        }
+
+        private void OnInPipeConnected(IAsyncResult iar)
+        {
+            this._inPipeConnected = true;
+            this.IPStream.EndWaitForConnection(iar);
         }
     }
 }
